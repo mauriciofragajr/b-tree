@@ -6,6 +6,7 @@ using namespace std;
 Page::Page(){
     this->num_keys = 0;
     this->pt = NULL;
+    this->tuples = new Tuple[MAX_KEYS];
 }
 int Page::getNumKeys(){
     return this->num_keys;

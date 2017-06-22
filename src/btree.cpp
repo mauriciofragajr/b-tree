@@ -41,7 +41,7 @@ Page * Btree::insertBtree(Page * root, int key, bool * boolean, int *return_key)
     /* RIGHTSON: PONTEIRO PARA O FILHO A DIREITA DA CHAVE NA TUPLA */
     /* BROTHER: PAGINA QUE VAI SER USADA NA CISÃO SE PRECISAR */
     Page * rightSon, *brother;
-    brother = new Page();
+    //brother = new Page();
 
     /* SE O NÓ E FOLHA, MELHOR LOCAL PARA INSERIR */
     if ( root == NULL){
@@ -58,7 +58,7 @@ Page * Btree::insertBtree(Page * root, int key, bool * boolean, int *return_key)
     if ( root->num_keys > pos && root->tuples[pos].key == key){
         cout << "Ja existe a key." << endl;
         *boolean = false;
-        delete brother;
+        //delete brother;
     }else{
         /* CHAMANDO RECURSIVAMENTE ATÉ ALGUM NÓ FOLHA */
         if ( pos == 0 )
@@ -74,6 +74,8 @@ Page * Btree::insertBtree(Page * root, int key, bool * boolean, int *return_key)
             }else{
                 cout << "OVERFLOW" << endl;
                 // OVERFLOW CASE
+
+                brother = new Page();
 
                 //MUITO IMPORTANTE INSERIR ANTES PARA TER O ELEMENTO CENTRAL DISPONÍVEL
                 insertToPage(*return_key,rightSon,root);

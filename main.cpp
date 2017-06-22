@@ -69,7 +69,7 @@ int main()
     DEFINE A QUANTIDADE DE ELEMENTOS A INSERIR
     */
 
-    int n = 20;
+    int n = 200;
     for ( int i = 0; i < n; i++){
         cout << "INSERINDO CHAVE #" << i << endl;
         tree.insertKey(i);

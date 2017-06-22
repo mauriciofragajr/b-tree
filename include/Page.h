@@ -15,7 +15,7 @@ class Page
     private:
         int num_keys;
         Page * pt;
-        Tuple tuples[MAX_KEYS];
+        Tuple * tuples;
         Page();
         int getNumKeys();
         void up();
