@@ -21,7 +21,7 @@ int main()
 {
     Btree tree; // INICIANDO ARVORE
 
-    /* MENU PRINCIPAL
+    /* MENU PRINCIPAL */
     int op;
     do{
         cout << "1 - INSERIR 2 - REMOVER 3 - IMPRIMIR 0 - SAIR\n" << endl;
@@ -62,12 +62,12 @@ int main()
         }
 
     } while ( op != 0 );
-    */
+
 
 
     /*
     DEFINE A QUANTIDADE DE ELEMENTOS A INSERIR
-    */
+
 
     int n = 200;
     for ( int i = 0; i < n; i++){
@@ -76,7 +76,7 @@ int main()
         cout << "-----ARVORE-----" << endl;
         tree.print();
     }
-
+    */
     return 0;
 }
 
