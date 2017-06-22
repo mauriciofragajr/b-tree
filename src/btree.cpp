@@ -156,3 +156,7 @@ int Btree::heightAux(Page * root){
 int Btree::height(){
     return heightAux(this->root);
 }
+bool Btree::isLeaf(Page * page){
+    if (page->pt == NULL) return true;
+    return false;
+}

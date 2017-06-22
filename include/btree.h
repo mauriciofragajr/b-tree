@@ -13,6 +13,7 @@ class Btree
         void insertKey(int key);
         int height();
     private:
+        bool isLeaf(Page * page);
         int heightAux(Page * root);
         int searchKey(int key);
         void printOnlyPage(Page * page, int h);

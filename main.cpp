@@ -21,6 +21,7 @@ int main()
 {
     Btree tree; // INICIANDO ARVORE
 
+    /* MENU PRINCIPAL
     int op;
     do{
         cout << "1 - INSERIR 2 - REMOVER 3 - IMPRIMIR 0 - SAIR\n" << endl;
@@ -32,15 +33,14 @@ int main()
                 cout << "0 - VOLTAR\n" << endl;
                 key = 1;
                 while ( key > 0){
-                    cout << "INSIRA UMA CHAVE: ";
+                    cout << "-----ARVORE-----" << endl;
+                    tree.print();
+                    cout << endl << "INSIRA UMA CHAVE: ";
                     cin >> key;
                     if (key > 0){
                         tree.insertKey(key);
                         system("cls");
                         cout << "0 - VOLTAR\n" << endl;
-                        cout << "-----ARVORE-----" << endl;
-                        tree.print();
-                        cout << endl;
                     }
                 }
                 system("cls");
@@ -49,37 +49,33 @@ int main()
                 system("cls");
                 break;
             case 3:
+                key = 1;
+                while (key != 0){
+                    system("cls");
+                    cout << "0 - VOLTAR\n" << endl;
+                    cout << "-----ARVORE-----" << endl;
+                    tree.print();
+                    cin >> key;
+                }
                 system("cls");
-                tree.print();
                 break;
         }
 
     } while ( op != 0 );
+    */
+
 
     /*
     DEFINE A QUANTIDADE DE ELEMENTOS A INSERIR
+    */
 
-    int n = 30;
+    int n = 20;
     for ( int i = 0; i < n; i++){
         cout << "INSERINDO CHAVE #" << i << endl;
         tree.insertKey(i);
         cout << "-----ARVORE-----" << endl;
         tree.print();
     }
-    */
-    /*
-    int chave;
-    do{
-        cout << "INSIRA UMA CHAVE OU 0 PARA SAIR: ";
-        cin >> chave;
-        cin.ignore();
-        cout << "INSERINDO #" << chave << endl;
-        tree.insertKey(chave);
-        cout << "-----ARVORE-----" << endl;
-        tree.print();
-
-    }while(chave != 0);
-    */
 
     return 0;
 }
