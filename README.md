@@ -7,3 +7,5 @@
 A ORDEM ESTÁ SENDO DEFINIDA NO ARQUIVO PAGE.H
 
 - Inserção Habilitada
+
+Obs.: Encapsulamento não necessário
